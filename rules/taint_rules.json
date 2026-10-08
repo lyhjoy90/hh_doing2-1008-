@@ -1,0 +1,5 @@
+{
+  "sources": ["latitude", "longitude", "req.latitude", "req.longitude", "passenger_location"],
+  "sanitizers": ["encrypt_aes256", "mask_gps_coords"],
+  "sinks": ["return", "db.execute", "print"]
+}
