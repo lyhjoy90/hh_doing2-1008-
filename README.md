@@ -127,3 +127,18 @@ drt-devsecops-analyzer/
 │
 ├── requirements.txt                  # 파이썬 필수 의존성 패키지 목록
 └── run_all.py                        # 서버 구동 및 DevSecOps 스캐너 원클릭 통합 실행 스크립트
+
+[1. 신도시 DRT 관제] ──▶ frontend/index.html & backend/drt_router.py
+  ├─ 동탄2신도시(동탄역 ↔ 시범단지/신주거문화타운) 출퇴근 셔틀 호출
+  └─ OpenStreetMap 지도 상 승객 실시간 GPS 마커 시각화 및 예약 처리
+
+[2. 위치정보 보호]   ──▶ analyzer/taint_analyzer.py & rules/taint_rules.json
+  ├─ 주민 GPS 위치 데이터 평문 노출 유출 방지
+  └─ AST 구문 분석 기반 latitude/longitude 평문 전송 취약점 자동 탐지
+
+[3. 공정 예약 검증] ──▶ analyzer/race_detector.py
+  ├─ 매크로 및 좌석 부정 독점 방지
+  └─ 백엔드 동시성 제어(asyncio.Lock) 누락 결함 스캔
+
+[4. 원클릭 파이프라인]─▶ run_all.py & devsecops_cli.py
+  └─ 백엔드 서버 구동과 보안 검사를 동시에 수행하는 DevSecOps 자동화
